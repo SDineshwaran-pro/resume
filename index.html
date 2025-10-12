@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dineshwaran S — Resume & Blog</title>
+  <meta name="description" content="Resume & Blog — Data Engineer | AWS | Airflow | Python | SQL" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root{--royal:#0f6cf2;--muted:#6b7280;--glass:rgba(15,108,242,0.06);--card:#ffffff}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:#f8fafc;color:#0b1220}
+    header.navbar{background:transparent}
+    .hero{background:linear-gradient(180deg,rgba(15,108,242,0.03),transparent);border-radius:12px;padding:36px}
+    .avatar{width:110px;height:110px;border-radius:22px;background:linear-gradient(135deg,var(--royal),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:36px;box-shadow:0 8px 30px rgba(15,108,242,0.12)}
+    h1{font-weight:700}
+    .sub{color:var(--muted);font-size:14px}
+    .btn-royal{background:var(--royal);border:none;color:white}
+    .card-soft{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+    .skill-badge{background:var(--glass);color:var(--royal);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+    .timeline .item{padding:12px 0;border-bottom:1px dashed #eef2ff}
+    .meta{color:var(--muted);font-size:13px}
+    .post-card{transition:transform .18s ease, box-shadow .18s ease}
+    .post-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(11,18,32,0.06)}
+    .footer{color:var(--muted);font-size:13px}
+    /* responsive tweaks */
+    @media (max-width:768px){.avatar{width:86px;height:86px;font-size:28px}}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <div class="avatar" style="width:44px;height:44px;border-radius:10px;font-size:16px">DS</div>
+        <div class="d-none d-md-block"><strong>Dineshwaran S</strong></div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto gap-2 align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="btn btn-outline-primary btn-sm" href="#contact">Hire Me</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <div class="hero card-soft" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h1>Hi — I'm <span style="color:var(--royal)">Dineshwaran S</span></h1>
+          <p class="lead meta">Programmer Analyst (Data Engineering) • AWS • Apache Airflow • Python • SQL</p>
+
+          <p>I design and operate reliable, scalable data pipelines. Experienced in ETL orchestration, cloud data platforms and production-ready automation. I enjoy turning messy data into actionable insights.</p>
+
+          <div class="mt-3 d-flex gap-2 flex-wrap">
+            <a class="btn btn-royal btn-sm" href="/Dineshwaran_Resume.pdf" download><i class="bi bi-download me-1"></i> Download Resume</a>
+            <a class="btn btn-outline-primary btn-sm" href="mailto:spdineshwaran4gmail.com"><i class="bi bi-envelope me-1"></i> Email</a>
+            <a class="btn btn-outline-secondary btn-sm" href="#blog">Read my blog</a>
+          </div>
+
+          <div class="mt-4 d-flex gap-3">
+            <div>
+              <div class="meta">Location</div>
+              <div>India</div>
+            </div>
+            <div>
+              <div class="meta">Phone</div>
+              <div>+91 8220206209</div>
+            </div>
+            <div>
+              <div class="meta">Email</div>
+              <div>spdineshwaran4gmail.com</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center mt-3 mt-md-0">
+          <div class="avatar" style="width:140px;height:140px;border-radius:22px;font-size:40px" data-aos="zoom-in">DS</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-lg-7">
+        <section id="about" class="card-soft mb-4" data-aos="fade-up" data-aos-delay="80">
+          <h3>About</h3>
+          <p>I build data engineering solutions focusing on reliability and maintainability — Apache Airflow for orchestration, AWS services (S3, EMR, Athena) for storage and analytics, Python and SQL for transformation and querying.</p>
+
+          <h5 class="mt-3">Education</h5>
+          <p class="meta mb-1">B.E. Computer Science and Engineering — Kongunadu College of Engineering and Technology (2019–2023) · CGPA: 8.71</p>
+          <p class="meta">12th — Little Angels Higher Secondary School · 79.1% | 10th — The Modern Academy Matriculation School · 97.4%</p>
+        </section>
+
+        <section id="experience" class="card-soft mb-4" data-aos="fade-up" data-aos-delay="120">
+          <h3>Experience</h3>
+          <div class="timeline">
+            <div class="item">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="mb-0">Cognizant Technology Solutions</h5>
+                  <div class="meta">Programmer Analyst — May 2025 – Present</div>
+                </div>
+                <div class="meta text-end">Data Engineering</div>
+              </div>
+              <p class="mt-2">Designed and managed ETL pipelines with Apache Airflow. Implemented S3 lifecycle policies, used EMR for large-scale processing and Athena for querying. Automated data quality checks and monitoring.</p>
+            </div>
+
+            <div class="item">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="mb-0">Programmer Analyst Trainee / Intern</h5>
+                  <div class="meta">May 2024 – May 2025 · Dec 2023 – Apr 2024</div>
+                </div>
+                <div class="meta text-end">ETL & Informatica</div>
+              </div>
+              <p class="mt-2">Worked with Informatica PowerCenter to build ETL mappings and optimize workflows. Participated in data migration and mapping design.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <section id="projects" class="card-soft mb-4" data-aos="fade-up" data-aos-delay="160">
+          <h3>Projects & Highlights</h3>
+          <ul>
+            <li><strong>AWS Data Development:</strong> ETL orchestration with Airflow, EMR-based processing, S3 lifecycle policies and Athena analytics.</li>
+            <li><strong>Agentic Chatbot:</strong> Built a conversational workflow for expense approvals integrated with GitHub APIs.</li>
+            <li><strong>Informatica Mappings:</strong> Designed sources & targets, created mappings, and performed unit testing.</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <aside class="col-lg-5">
+        <div id="skills" class="card-soft mb-4" data-aos="fade-left" data-aos-delay="80">
+          <h4>Skills</h4>
+          <div class="d-flex flex-wrap gap-2 mt-2">
+            <span class="skill-badge">AWS (S3, EMR, Athena)</span>
+            <span class="skill-badge">Apache Airflow</span>
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">SQL / MySQL</span>
+            <span class="skill-badge">Informatica PowerCenter</span>
+            <span class="skill-badge">Git & CI/CD</span>
+            <span class="skill-badge">HTML & CSS</span>
+          </div>
+
+          <h5 class="mt-3">Tools</h5>
+          <div class="meta">GitHub, GitHub Actions, MySQL Workbench, Confluence, Azure DevOps</div>
+        </div>
+
+        <div class="card-soft mb-4" data-aos="fade-left" data-aos-delay="120">
+          <h4>Quick Facts</h4>
+          <p class="meta">Open to recruitment and internship roles in data engineering. Notice period: negotiable.</p>
+          <div class="mt-2 d-flex gap-2">
+            <a class="btn btn-outline-primary btn-sm w-100" href="https://github.com/" target="_blank"><i class="bi bi-github me-1"></i> GitHub</a>
+            <a class="btn btn-outline-secondary btn-sm w-100" href="#contact"><i class="bi bi-link-45deg me-1"></i> Contact</a>
+          </div>
+        </div>
+
+        <div class="card-soft mb-4" data-aos="fade-left" data-aos-delay="160">
+          <h4>Education</h4>
+          <p class="meta">B.E - Computer Science and Engineering (2019-2023) — Kongunadu College of Engineering and Technology · CGPA: 8.71</p>
+        </div>
+
+      </aside>
+    </div>
+
+    <section id="blog" class="mt-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>Blog</h3>
+        <a class="btn btn-sm btn-outline-primary" href="#compose">Write</a>
+      </div>
+
+      <div class="row g-3" id="posts" data-aos="fade-up" data-aos-delay="120"></div>
+
+      <div id="compose" class="card-soft mt-3" style="display:none">
+        <h5>Compose (local)</h5>
+        <input id="post-title" class="form-control mb-2" placeholder="Title">
+        <textarea id="post-body" class="form-control mb-2" rows="5" placeholder="Write post HTML content"></textarea>
+        <div class="d-flex gap-2"><button class="btn btn-royal btn-sm" onclick="savePost()">Save</button><button class="btn btn-outline-secondary btn-sm" onclick="toggleCompose(false)">Close</button></div>
+      </div>
+
+    </section>
+
+    <section id="contact" class="card-soft mt-4" data-aos="fade-up" data-aos-delay="80">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Contact</h4>
+          <p class="meta">I'm available for interviews and new opportunities. Drop a message and I'll reply.</p>
+
+          <!-- Simple form using Formspree (replace ACTION with your Formspree endpoint or serverless function) -->
+          <form action="https://formspree.io/f/mayplkyo" method="POST">
+            <div class="mb-2"><input name="name" class="form-control" placeholder="Your name" required></div>
+            <div class="mb-2"><input name="email" class="form-control" placeholder="Email" required></div>
+            <div class="mb-2"><textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea></div>
+            <div><button class="btn btn-royal">Send Message</button></div>
+          </form>
+
+        </div>
+        <div class="col-md-6">
+          <h5>Other ways to reach</h5>
+          <p class="meta">Phone: +91 8220206209</p>
+          <p class="meta">Email: spdineshwaran4gmail.com</p>
+          <p class="meta">LinkedIn: <a href="#">(add your LinkedIn)</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-5 mb-5 text-center footer">
+      <div>© <span id="year"></span> Dineshwaran S — Built with care • Minimal White + Royal Blue</div>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script> AOS.init({duration:700,once:true}); document.getElementById('year').textContent=new Date().getFullYear(); </script>
+
+  <script>
+    // Blog posts data (edit to add/remove posts)
+    const postsData = [
+      {id:1,title:'Designing Reliable ETL Pipelines with Apache Airflow',date:'2025-06-10',excerpt:'Best practices for scheduling, retries, alerting and monitoring Airflow DAGs.',tags:['Airflow','ETL','AWS'],body:'<p>Use idempotent tasks, set retries & alerts, leverage XCom for small payloads. Monitor with metrics and set SLA callbacks.</p>'},
+      {id:2,title:'Using AWS EMR for Cost-Effective Batch Processing',date:'2025-03-20',excerpt:'Cluster sizing, spot instances and S3 lifecycle tips.',tags:['AWS','EMR','Big Data'],body:'<p>Tune your spark configs, use spot instances carefully, and separate storage from compute using S3.</p>'}
+    ];
+
+    function renderPosts(){
+      const container = document.getElementById('posts'); container.innerHTML='';
+      postsData.slice().reverse().forEach(p=>{
+        const col = document.createElement('div'); col.className='col-md-6';
+        col.innerHTML = `<article class='card-soft post-card p-3 h-100'><h5>${p.title}</h5><div class='meta mb-2'>${p.date} · ${p.tags.join(', ')}</div><p>${p.excerpt}</p><div class='d-flex justify-content-between align-items-center mt-3'><a href='#' class='btn btn-sm btn-outline-primary' onclick='openPost(${p.id});return false;'>Read</a><div class='meta'>Tags: ${p.tags.map(t=>`<span class="badge bg-light text-dark me-1">${t}</span>`).join('')}</div></div></article>`;
+        container.appendChild(col);
+      });
+    }
+
+    function openPost(id){
+      const p = postsData.find(x=>x.id===id); if(!p) return;
+      const modal = document.createElement('div'); modal.style.position='fixed'; modal.style.left=0; modal.style.top=0; modal.style.right=0; modal.style.bottom=0; modal.style.background='rgba(11,18,32,0.6)'; modal.style.display='flex'; modal.style.alignItems='center'; modal.style.justifyContent='center'; modal.style.zIndex=9999;
+      const box = document.createElement('div'); box.style.width='min(900px,96%)'; box.style.maxHeight='90vh'; box.style.overflow='auto'; box.style.background='white'; box.style.padding='28px'; box.style.borderRadius='12px';
+      box.innerHTML = `<h3>${p.title}</h3><div class='meta'>${p.date} · ${p.tags.join(', ')}</div><div style='margin-top:14px'>${p.body}</div><div class='mt-4 text-end'><button class='btn btn-outline-secondary me-2' onclick='closeModal()'>Close</button></div>`;
+      modal.appendChild(box); modal.id='post-modal'; document.body.appendChild(modal);
+      window.closeModal = ()=>{ document.body.removeChild(modal); delete window.closeModal; };
+    }
+
+    function toggleCompose(show=true){ document.getElementById('compose').style.display = show? 'block':'none'; }
+    function savePost(){ const t=document.getElementById('post-title').value.trim(); const b=document.getElementById('post-body').value.trim(); if(!t||!b){alert('Add title and body');return;} const id = postsData.length? Math.max(...postsData.map(x=>x.id))+1:1; postsData.push({id,title:t,date:new Date().toISOString().slice(0,10),excerpt:b.slice(0,140)+'...',tags:['note'],body: b.replace(/\n/g,'<br/>')}); renderPosts(); alert('Post saved locally — edit the file to persist.'); toggleCompose(false); }
+
+    renderPosts();
+  </script>
+
+</body>
+</html>
