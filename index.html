@@ -146,6 +146,7 @@
       </div>
 
       <aside class="col-lg-5">
+        <!-- Skills -->
         <div id="skills" class="card-soft mb-4" data-aos="fade-left" data-aos-delay="80">
           <h4>Skills</h4>
           <div class="d-flex flex-wrap gap-2 mt-2">
@@ -157,12 +158,54 @@
             <span class="skill-badge">Git & CI/CD</span>
             <span class="skill-badge">HTML & CSS</span>
           </div>
-
-          <h5 class="mt-3">Tools</h5>
-          <div class="meta">GitHub, GitHub Actions, MySQL Workbench, Confluence, Azure DevOps</div>
         </div>
 
+        <!-- Tools & Platforms -->
         <div class="card-soft mb-4" data-aos="fade-left" data-aos-delay="120">
+          <h4>Tools & Platforms</h4>
+          <div class="d-flex flex-wrap gap-3 mt-2">
+            <div class="text-center" style="width:60px">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" style="width:40px;height:40px">
+              <div class="meta" style="font-size:12px">Python</div>
+            </div>
+            <div class="text-center" style="width:60px">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" style="width:40px;height:40px">
+              <div class="meta" style="font-size:12px">MySQL</div>
+            </div>
+            <div class="text-center" style="width:60px">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" alt="AWS" style="width:40px;height:40px">
+              <div class="meta" style="font-size:12px">AWS</div>
+            </div>
+            <div class="text-center" style="width:60px">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" style="width:40px;height:40px">
+              <div class="meta" style="font-size:12px">Git</div>
+            </div>
+            <div class="text-center" style="width:60px">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/airflow/airflow-original.svg" alt="Airflow" style="width:40px;height:40px">
+              <div class="meta" style="font-size:12px">Airflow</div>
+            </div>
+            <div class="text-center" style="width:60px">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" style="width:40px;height:40px">
+              <div class="meta" style="font-size:12px">HTML5</div>
+            </div>
+            <div class="text-center" style="width:60px">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" style="width:40px;height:40px">
+              <div class="meta" style="font-size:12px">CSS3</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="card-soft mb-4" data-aos="fade-left" data-aos-delay="160">
+          <h4>Achievements</h4>
+          <ul class="mt-2">
+            <li>Optimized ETL pipelines at Cognizant leading to 30% faster data processing.</li>
+            <li>Implemented automated monitoring and alerting reducing production incidents by 25%.</li>
+          </ul>
+        </div>
+
+        <!-- Quick Facts -->
+        <div class="card-soft mb-4" data-aos="fade-left" data-aos-delay="200">
           <h4>Quick Facts</h4>
           <p class="meta">Open to recruitment and internship roles in data engineering. Notice period: negotiable.</p>
           <div class="mt-2 d-flex gap-2">
@@ -171,7 +214,8 @@
           </div>
         </div>
 
-        <div class="card-soft mb-4" data-aos="fade-left" data-aos-delay="160">
+        <!-- Education -->
+        <div class="card-soft mb-4" data-aos="fade-left" data-aos-delay="240">
           <h4>Education</h4>
           <p class="meta">B.E - Computer Science and Engineering (2019-2023) — Kongunadu College of Engineering and Technology · CGPA: 8.71</p>
         </div>
@@ -179,12 +223,12 @@
       </aside>
     </div>
 
+    <!-- Blog Section -->
     <section id="blog" class="mt-4">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h3>Blog</h3>
         <a class="btn btn-sm btn-outline-primary" href="#compose">Write</a>
       </div>
-
       <div class="row g-3" id="posts" data-aos="fade-up" data-aos-delay="120"></div>
 
       <div id="compose" class="card-soft mt-3" style="display:none">
@@ -193,16 +237,15 @@
         <textarea id="post-body" class="form-control mb-2" rows="5" placeholder="Write post HTML content"></textarea>
         <div class="d-flex gap-2"><button class="btn btn-royal btn-sm" onclick="savePost()">Save</button><button class="btn btn-outline-secondary btn-sm" onclick="toggleCompose(false)">Close</button></div>
       </div>
-
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="card-soft mt-4" data-aos="fade-up" data-aos-delay="80">
       <div class="row">
         <div class="col-md-6">
           <h4>Contact</h4>
           <p class="meta">I'm available for interviews and new opportunities. Drop a message and I'll reply.</p>
 
-          <!-- Simple form using Formspree (replace ACTION with your Formspree endpoint or serverless function) -->
           <form action="https://formspree.io/f/mayplkyo" method="POST">
             <div class="mb-2"><input name="name" class="form-control" placeholder="Your name" required></div>
             <div class="mb-2"><input name="email" class="form-control" placeholder="Email" required></div>
@@ -228,38 +271,42 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script> AOS.init({duration:700,once:true}); document.getElementById('year').textContent=new Date().getFullYear(); </script>
+  <script> 
+    AOS.init({duration:700,once:true}); 
+    document.getElementById('year').textContent=new Date().getFullYear(); 
+  </script>
 
   <script>
-    // Blog posts data (edit to add/remove posts)
-    const postsData = [
-      {id:1,title:'Designing Reliable ETL Pipelines with Apache Airflow',date:'2025-06-10',excerpt:'Best practices for scheduling, retries, alerting and monitoring Airflow DAGs.',tags:['Airflow','ETL','AWS'],body:'<p>Use idempotent tasks, set retries & alerts, leverage XCom for small payloads. Monitor with metrics and set SLA callbacks.</p>'},
-      {id:2,title:'Using AWS EMR for Cost-Effective Batch Processing',date:'2025-03-20',excerpt:'Cluster sizing, spot instances and S3 lifecycle tips.',tags:['AWS','EMR','Big Data'],body:'<p>Tune your spark configs, use spot instances carefully, and separate storage from compute using S3.</p>'}
-    ];
+    // Blog posts data
+    const postsContainer = document.getElementById('posts');
+    let posts = [];
 
     function renderPosts(){
-      const container = document.getElementById('posts'); container.innerHTML='';
-      postsData.slice().reverse().forEach(p=>{
-        const col = document.createElement('div'); col.className='col-md-6';
-        col.innerHTML = `<article class='card-soft post-card p-3 h-100'><h5>${p.title}</h5><div class='meta mb-2'>${p.date} · ${p.tags.join(', ')}</div><p>${p.excerpt}</p><div class='d-flex justify-content-between align-items-center mt-3'><a href='#' class='btn btn-sm btn-outline-primary' onclick='openPost(${p.id});return false;'>Read</a><div class='meta'>Tags: ${p.tags.map(t=>`<span class="badge bg-light text-dark me-1">${t}</span>`).join('')}</div></div></article>`;
-        container.appendChild(col);
+      postsContainer.innerHTML='';
+      posts.forEach((p,i)=>{
+        const div=document.createElement('div');
+        div.className='col-md-6';
+        div.innerHTML=`<div class="post-card card-soft p-3">
+          <h5>${p.title}</h5>
+          <div>${p.body}</div>
+        </div>`;
+        postsContainer.appendChild(div);
       });
     }
 
-    function openPost(id){
-      const p = postsData.find(x=>x.id===id); if(!p) return;
-      const modal = document.createElement('div'); modal.style.position='fixed'; modal.style.left=0; modal.style.top=0; modal.style.right=0; modal.style.bottom=0; modal.style.background='rgba(11,18,32,0.6)'; modal.style.display='flex'; modal.style.alignItems='center'; modal.style.justifyContent='center'; modal.style.zIndex=9999;
-      const box = document.createElement('div'); box.style.width='min(900px,96%)'; box.style.maxHeight='90vh'; box.style.overflow='auto'; box.style.background='white'; box.style.padding='28px'; box.style.borderRadius='12px';
-      box.innerHTML = `<h3>${p.title}</h3><div class='meta'>${p.date} · ${p.tags.join(', ')}</div><div style='margin-top:14px'>${p.body}</div><div class='mt-4 text-end'><button class='btn btn-outline-secondary me-2' onclick='closeModal()'>Close</button></div>`;
-      modal.appendChild(box); modal.id='post-modal'; document.body.appendChild(modal);
-      window.closeModal = ()=>{ document.body.removeChild(modal); delete window.closeModal; };
+    function toggleCompose(show){
+      document.getElementById('compose').style.display=show?'block':'none';
     }
 
-    function toggleCompose(show=true){ document.getElementById('compose').style.display = show? 'block':'none'; }
-    function savePost(){ const t=document.getElementById('post-title').value.trim(); const b=document.getElementById('post-body').value.trim(); if(!t||!b){alert('Add title and body');return;} const id = postsData.length? Math.max(...postsData.map(x=>x.id))+1:1; postsData.push({id,title:t,date:new Date().toISOString().slice(0,10),excerpt:b.slice(0,140)+'...',tags:['note'],body: b.replace(/\n/g,'<br/>')}); renderPosts(); alert('Post saved locally — edit the file to persist.'); toggleCompose(false); }
-
-    renderPosts();
+    function savePost(){
+      const title=document.getElementById('post-title').value;
+      const body=document.getElementById('post-body').value;
+      if(title && body){posts.push({title,body});renderPosts();toggleCompose(false);}
+      document.getElementById('post-title').value='';
+      document.getElementById('post-body').value='';
+    }
   </script>
 
 </body>
-</html>
+                                    </html>
+
