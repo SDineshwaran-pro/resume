@@ -1,304 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dineshwaran S — Resume & Blog</title>
-  <meta name="description" content="Resume & Blog — Data Engineer | AWS | Airflow | Python | SQL" />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- AOS for scroll animations -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <style>
-    :root{--royal:#0f6cf2;--muted:#6b7280;--glass:rgba(15,108,242,0.06);--card:#ffffff}
-    *{box-sizing:border-box}
-    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:#f8fafc;color:#0b1220}
-    header.navbar{background:transparent}
-    .hero{background:linear-gradient(180deg,rgba(15,108,242,0.03),transparent);border-radius:12px;padding:36px}
-    .avatar{width:110px;height:110px;border-radius:22px;background:linear-gradient(135deg,var(--royal),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:36px;box-shadow:0 8px 30px rgba(15,108,242,0.12)}
-    h1{font-weight:700}
-    .sub{color:var(--muted);font-size:14px}
-    .btn-royal{background:var(--royal);border:none;color:white}
-    .card-soft{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
-    .skill-badge{background:var(--glass);color:var(--royal);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
-    .timeline .item{padding:12px 0;border-bottom:1px dashed #eef2ff}
-    .meta{color:var(--muted);font-size:13px}
-    .post-card{transition:transform .18s ease, box-shadow .18s ease}
-    .post-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(11,18,32,0.06)}
-    .footer{color:var(--muted);font-size:13px}
-    /* responsive tweaks */
-    @media (max-width:768px){.avatar{width:86px;height:86px;font-size:28px}}
-  </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel — Dineshwaran S Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/admin.css"/>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light py-3">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <div class="avatar" style="width:44px;height:44px;border-radius:10px;font-size:16px">DS</div>
-        <div class="d-none d-md-block"><strong>Dineshwaran S</strong></div>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav ms-auto gap-2 align-items-center">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-          <li class="nav-item"><a class="btn btn-outline-primary btn-sm" href="#contact">Hire Me</a></li>
-        </ul>
-      </div>
+<div class="admin-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">DS<span>.</span>Admin</div>
+    <nav class="sidebar-nav">
+      <a href="#meta" class="snav active" data-section="meta">👤 Profile</a>
+      <a href="#experience" class="snav" data-section="experience">💼 Experience</a>
+      <a href="#skills" class="snav" data-section="skills">⚡ Skills</a>
+      <a href="#achievements" class="snav" data-section="achievements">🏆 Achievements</a>
+      <a href="#certifications" class="snav" data-section="certifications">🎓 Certifications</a>
+      <a href="#education" class="snav" data-section="education">📚 Education</a>
+      <a href="#social" class="snav" data-section="social">🔗 Social Links</a>
+    </nav>
+    <div class="sidebar-actions">
+      <button class="btn-save" id="saveAll">💾 Save All Changes</button>
+      <button class="btn-reset" id="resetAll">↺ Reset to Default</button>
+      <a href="../index.html" class="btn-preview" target="_blank">👁 Preview Site ↗</a>
     </div>
-  </nav>
+    <div class="sidebar-status" id="status"></div>
+  </aside>
 
-  <main class="container my-4">
-    <div class="hero card-soft" data-aos="fade-up">
-      <div class="row align-items-center">
-        <div class="col-md-8">
-          <h1>Hi — I'm <span style="color:var(--royal)">Dineshwaran S</span></h1>
-          <p class="lead meta">Programmer Analyst (Data Engineering) • AWS • Apache Airflow • Python • SQL</p>
+  <!-- MAIN CONTENT -->
+  <main class="admin-main">
 
-          <p>I design and operate reliable, scalable data pipelines. Experienced in ETL orchestration, cloud data platforms and production-ready automation. I enjoy turning messy data into actionable insights.</p>
-
-          <div class="mt-3 d-flex gap-2 flex-wrap">
-            <a class="btn btn-royal btn-sm" href="/Dineshwaran_Resume.pdf" download><i class="bi bi-download me-1"></i> Download Resume</a>
-            <a class="btn btn-outline-primary btn-sm" href="mailto:spdineshwaran4gmail.com"><i class="bi bi-envelope me-1"></i> Email</a>
-            <a class="btn btn-outline-secondary btn-sm" href="#blog">Read my blog</a>
-          </div>
-
-          <div class="mt-4 d-flex gap-3">
-            <div>
-              <div class="meta">Location</div>
-              <div>India</div>
-            </div>
-            <div>
-              <div class="meta">Phone</div>
-              <div>+91 8220206209</div>
-            </div>
-            <div>
-              <div class="meta">Email</div>
-              <div>spdineshwaran4gmail.com</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 text-center mt-3 mt-md-0">
-          <div class="avatar" style="width:140px;height:140px;border-radius:22px;font-size:40px" data-aos="zoom-in">DS</div>
-        </div>
+    <!-- ── META / PROFILE ── -->
+    <section id="meta" class="admin-section active">
+      <div class="section-header">
+        <h1>Profile</h1>
+        <p>Your basic info shown across the site</p>
       </div>
-    </div>
-
-    <div class="row mt-4">
-      <div class="col-lg-7">
-        <section id="about" class="card-soft mb-4" data-aos="fade-up" data-aos-delay="80">
-          <h3>About</h3>
-          <p>I build data engineering solutions focusing on reliability and maintainability — Apache Airflow for orchestration, AWS services (S3, EMR, Athena) for storage and analytics, Python and SQL for transformation and querying.</p>
-
-          <h5 class="mt-3">Education</h5>
-          <p class="meta mb-1">B.E. Computer Science and Engineering — Kongunadu College of Engineering and Technology (2019–2023) · CGPA: 8.71</p>
-          <p class="meta">12th — Little Angels Higher Secondary School · 79.1% | 10th — The Modern Academy Matriculation School · 97.4%</p>
-        </section>
-
-        <section id="experience" class="card-soft mb-4" data-aos="fade-up" data-aos-delay="120">
-          <h3>Experience</h3>
-          <div class="timeline">
-            <div class="item">
-              <div class="d-flex justify-content-between">
-                <div>
-                  <h5 class="mb-0">Cognizant Technology Solutions</h5>
-                  <div class="meta">Programmer Analyst — May 2025 – Present</div>
-                </div>
-                <div class="meta text-end">Data Engineering</div>
-              </div>
-              <p class="mt-2">Designed and managed ETL pipelines with Apache Airflow. Implemented S3 lifecycle policies, used EMR for large-scale processing and Athena for querying. Automated data quality checks and monitoring.</p>
-            </div>
-
-            <div class="item">
-              <div class="d-flex justify-content-between">
-                <div>
-                  <h5 class="mb-0">Programmer Analyst Trainee / Intern</h5>
-                  <div class="meta">May 2024 – May 2025 · Dec 2023 – Apr 2024</div>
-                </div>
-                <div class="meta text-end">ETL & Informatica</div>
-              </div>
-              <p class="mt-2">Worked with Informatica PowerCenter to build ETL mappings and optimize workflows. Participated in data migration and mapping design.</p>
-            </div>
-
-          </div>
-        </section>
-
-        <section id="projects" class="card-soft mb-4" data-aos="fade-up" data-aos-delay="160">
-          <h3>Projects & Highlights</h3>
-          <ul>
-            <li><strong>AWS Data Development:</strong> ETL orchestration with Airflow, EMR-based processing, S3 lifecycle policies and Athena analytics.</li>
-            <li><strong>Agentic Chatbot:</strong> Built a conversational workflow for expense approvals integrated with GitHub APIs.</li>
-            <li><strong>Informatica Mappings:</strong> Designed sources & targets, created mappings, and performed unit testing.</li>
-          </ul>
-        </section>
-
-      </div>
-
-      <aside class="col-lg-5">
-        <!-- Skills -->
-        <div id="skills" class="card-soft mb-4" data-aos="fade-left" data-aos-delay="80">
-          <h4>Skills</h4>
-          <div class="d-flex flex-wrap gap-2 mt-2">
-            <span class="skill-badge">AWS (S3, EMR, Athena)</span>
-            <span class="skill-badge">Apache Airflow</span>
-            <span class="skill-badge">Python</span>
-            <span class="skill-badge">SQL / MySQL</span>
-            <span class="skill-badge">Informatica PowerCenter</span>
-            <span class="skill-badge">Git & CI/CD</span>
-            <span class="skill-badge">HTML & CSS</span>
-          </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="meta-name" placeholder="Dineshwaran S"/>
         </div>
-
-        <!-- Tools & Platforms -->
-        <div class="card-soft mb-4" data-aos="fade-left" data-aos-delay="120">
-          <h4>Tools & Platforms</h4>
-          <div class="d-flex flex-wrap gap-3 mt-2">
-            <div class="text-center" style="width:60px">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" style="width:40px;height:40px">
-              <div class="meta" style="font-size:12px">Python</div>
-            </div>
-            <div class="text-center" style="width:60px">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" style="width:40px;height:40px">
-              <div class="meta" style="font-size:12px">MySQL</div>
-            </div>
-            <div class="text-center" style="width:60px">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" alt="AWS" style="width:40px;height:40px">
-              <div class="meta" style="font-size:12px">AWS</div>
-            </div>
-            <div class="text-center" style="width:60px">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" style="width:40px;height:40px">
-              <div class="meta" style="font-size:12px">Git</div>
-            </div>
-            <div class="text-center" style="width:60px">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/airflow/airflow-original.svg" alt="Airflow" style="width:40px;height:40px">
-              <div class="meta" style="font-size:12px">Airflow</div>
-            </div>
-            <div class="text-center" style="width:60px">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" style="width:40px;height:40px">
-              <div class="meta" style="font-size:12px">HTML5</div>
-            </div>
-            <div class="text-center" style="width:60px">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" style="width:40px;height:40px">
-              <div class="meta" style="font-size:12px">CSS3</div>
-            </div>
-          </div>
+        <div class="form-group">
+          <label>Title / Tagline</label>
+          <input type="text" id="meta-title" placeholder="AI Engineer · Data Engineer"/>
         </div>
-
-        <!-- Achievements -->
-        <div class="card-soft mb-4" data-aos="fade-left" data-aos-delay="160">
-          <h4>Achievements</h4>
-          <ul class="mt-2">
-            <li>Optimized ETL pipelines at Cognizant leading to 30% faster data processing.</li>
-            <li>Implemented automated monitoring and alerting reducing production incidents by 25%.</li>
-          </ul>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="meta-email" placeholder="you@email.com"/>
         </div>
-
-        <!-- Quick Facts -->
-        <div class="card-soft mb-4" data-aos="fade-left" data-aos-delay="200">
-          <h4>Quick Facts</h4>
-          <p class="meta">Open to recruitment and internship roles in data engineering. Notice period: negotiable.</p>
-          <div class="mt-2 d-flex gap-2">
-            <a class="btn btn-outline-primary btn-sm w-100" href="https://github.com/" target="_blank"><i class="bi bi-github me-1"></i> GitHub</a>
-            <a class="btn btn-outline-secondary btn-sm w-100" href="#contact"><i class="bi bi-link-45deg me-1"></i> Contact</a>
-          </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="text" id="meta-phone" placeholder="+91 XXXXX XXXXX"/>
         </div>
-
-        <!-- Education -->
-        <div class="card-soft mb-4" data-aos="fade-left" data-aos-delay="240">
-          <h4>Education</h4>
-          <p class="meta">B.E - Computer Science and Engineering (2019-2023) — Kongunadu College of Engineering and Technology · CGPA: 8.71</p>
+        <div class="form-group full">
+          <label>Location</label>
+          <input type="text" id="meta-location" placeholder="City, State, Country"/>
         </div>
-
-      </aside>
-    </div>
-
-    <!-- Blog Section -->
-    <section id="blog" class="mt-4">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h3>Blog</h3>
-        <a class="btn btn-sm btn-outline-primary" href="#compose">Write</a>
-      </div>
-      <div class="row g-3" id="posts" data-aos="fade-up" data-aos-delay="120"></div>
-
-      <div id="compose" class="card-soft mt-3" style="display:none">
-        <h5>Compose (local)</h5>
-        <input id="post-title" class="form-control mb-2" placeholder="Title">
-        <textarea id="post-body" class="form-control mb-2" rows="5" placeholder="Write post HTML content"></textarea>
-        <div class="d-flex gap-2"><button class="btn btn-royal btn-sm" onclick="savePost()">Save</button><button class="btn btn-outline-secondary btn-sm" onclick="toggleCompose(false)">Close</button></div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="card-soft mt-4" data-aos="fade-up" data-aos-delay="80">
-      <div class="row">
-        <div class="col-md-6">
-          <h4>Contact</h4>
-          <p class="meta">I'm available for interviews and new opportunities. Drop a message and I'll reply.</p>
-        </div>
-        <div class="col-md-6">
-          <h5>Other ways to reach</h5>
-          <p class="meta">Phone: +91 8220206209</p>
-          <p class="meta">Email: spdineshwaran4gmail.com</p>
-          <p class="meta">LinkedIn: <a href="#">(add your LinkedIn)</a></p>
+        <div class="form-group full">
+          <label>Hero Summary (shown below your name)</label>
+          <textarea id="meta-herosub" rows="3" placeholder="Short punchy description..."></textarea>
         </div>
       </div>
     </section>
 
-    <footer class="mt-5 mb-5 text-center footer">
-      <div>© <span id="year"></span> Dineshwaran S — Built with care • Minimal White + Royal Blue</div>
-    </footer>
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience" class="admin-section">
+      <div class="section-header">
+        <h1>Experience</h1>
+        <p>Timeline of work experience</p>
+        <button class="btn-add" id="add-exp">+ Add Role</button>
+      </div>
+      <div id="exp-editor"></div>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills" class="admin-section">
+      <div class="section-header">
+        <h1>Skills</h1>
+        <p>Skill categories and their tags</p>
+        <button class="btn-add" id="add-skill">+ Add Category</button>
+      </div>
+      <div id="skill-editor"></div>
+    </section>
+
+    <!-- ── ACHIEVEMENTS ── -->
+    <section id="achievements" class="admin-section">
+      <div class="section-header">
+        <h1>Achievements</h1>
+        <p>Milestones and awards</p>
+        <button class="btn-add" id="add-ach">+ Add Achievement</button>
+      </div>
+      <div id="ach-editor"></div>
+    </section>
+
+    <!-- ── CERTIFICATIONS ── -->
+    <section id="certifications" class="admin-section">
+      <div class="section-header">
+        <h1>Certifications</h1>
+        <p>Credentials and courses</p>
+        <button class="btn-add" id="add-cert">+ Add Certification</button>
+      </div>
+      <div id="cert-editor"></div>
+    </section>
+
+    <!-- ── EDUCATION ── -->
+    <section id="education" class="admin-section">
+      <div class="section-header">
+        <h1>Education</h1>
+        <p>Academic background</p>
+        <button class="btn-add" id="add-edu">+ Add Entry</button>
+      </div>
+      <div id="edu-editor"></div>
+    </section>
+
+    <!-- ── SOCIAL ── -->
+    <section id="social" class="admin-section">
+      <div class="section-header">
+        <h1>Social Links</h1>
+        <p>Links shown in contact section</p>
+        <button class="btn-add" id="add-social">+ Add Link</button>
+      </div>
+      <div id="social-editor"></div>
+    </section>
+
   </main>
+</div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script> 
-    AOS.init({duration:700,once:true}); 
-    document.getElementById('year').textContent=new Date().getFullYear(); 
-  </script>
-
-  <script>
-    // Blog posts data
-    const postsContainer = document.getElementById('posts');
-    let posts = [];
-
-    function renderPosts(){
-      postsContainer.innerHTML='';
-      posts.forEach((p,i)=>{
-        const div=document.createElement('div');
-        div.className='col-md-6';
-        div.innerHTML=`<div class="post-card card-soft p-3">
-          <h5>${p.title}</h5>
-          <div>${p.body}</div>
-        </div>`;
-        postsContainer.appendChild(div);
-      });
-    }
-
-    function toggleCompose(show){
-      document.getElementById('compose').style.display=show?'block':'none';
-    }
-
-    function savePost(){
-      const title=document.getElementById('post-title').value;
-      const body=document.getElementById('post-body').value;
-      if(title && body){posts.push({title,body});renderPosts();toggleCompose(false);}
-      document.getElementById('post-title').value='';
-      document.getElementById('post-body').value='';
-    }
-  </script>
-
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/admin.js"></script>
 </body>
-                                    </html>
-
+</html>
